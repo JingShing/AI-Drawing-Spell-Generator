@@ -9,5 +9,4 @@
 也可以透過 import 導入自己的詞典。
 
 # UI
----
 ![img](img/UI.png)
