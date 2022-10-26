@@ -86,7 +86,6 @@ class page_module(Frame):
     def import_set(self):
         set_path = filedialog.askopenfilename()
         if set_path:
-            print('RRR')
             self.word_list.delete(0, END)
             self.data_list.clear()
             self.data_list = load_spell_list(set_path).copy()
