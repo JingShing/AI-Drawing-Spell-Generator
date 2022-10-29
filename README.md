@@ -16,8 +16,10 @@ it can now by double clicking same word to add quote to this word.
 Add quote change button to change '()' to '{}'.
 
 ![quote_change](img/quote_change.png)
-# UI
-![img](img/UI.png)
+## New UI size
+![size](img/new_ui_size.png)
+# NEW UI
+![img](img/New_UI.png)
 
 # Spell Dictionary Format
 ## "Description:Tag"
@@ -33,3 +35,5 @@ Example $\Rightarrow$ This is an tag for something:tag
 ## ver 1.1
 * it can now by double clicking same word to add quote to this word.
 * Add quote change button to change '()' to '{}'.
+## ver 1.1.1
+* Resize UI
