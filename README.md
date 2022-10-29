@@ -37,3 +37,5 @@ Example $\Rightarrow$ This is an tag for something:tag
 * Add quote change button to change '()' to '{}'.
 ## ver 1.1.1
 * Resize UI
+## ver 1.2
+* it can now exchange both '()' to '{}' or '{}' to '()'
