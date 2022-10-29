@@ -13,7 +13,7 @@ def load_spell_list(path):
     file.close()
     return word_list
 
-class Gui_helper_main:
+class Gui_helper_main:# I don't like to stuff all widget in main root so I use class to manage class and root.
     def __init__(self):
         self.root = Tk()
         self.frame = None
@@ -28,21 +28,21 @@ class Gui_helper_main:
         self.frames = [page_module(self)]
         self.switch_frame(0)
         
-    def switch_frame(self, index):
+    def switch_frame(self, index):# switch different page and init
         if self.frame is not None:
             self.frame.grid_forget()
         self.frame_index = index
         self.frame = self.frames[self.frame_index]
         self.frame.grid(column=0, row=0, sticky=N+W)
 
-    def run(self):
+    def run(self):# run the mainloop
         self.root.mainloop()
 
-    def quit(self):
+    def quit(self):# if quit will pop a window to confirm
         if messagebox.askyesno('Confirm','Are you sure you want to quit?'):
             self.root.quit()
 
-class page_module(Frame):
+class page_module(Frame):# I use page class to manage tkinter widget
     def __init__(self, master):
         Frame.__init__(self, master = master.root)
         self.main = master
@@ -57,7 +57,7 @@ class page_module(Frame):
         self.spawn_result.grid(column=0, row=0, sticky=N+W)
         self.word_list = Listbox(self)
         self.word_list.grid(column=0, row=1, sticky=N+W)
-        self.load_list()
+        self.load_list()# init listbox
         self.word_list.bind('<Double-1>', self.add_word_dict)
         self.clear_button = Button(self, text='clear', command=self.clear_word)
         self.clear_button.grid(column=1, row=0, sticky=N+W)
