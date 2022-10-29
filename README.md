@@ -10,9 +10,12 @@ You can import your own word dictionary.
 # Update
 ## Quote function
 it can now by double clicking same word to add quote to this word.
+
+![quote](img/quote.png)
 ## Convert Quote
 Add quote change button to change '()' to '{}'.
 
+![quote_change](img/quote_change.png)
 # UI
 ![img](img/UI.png)
 
