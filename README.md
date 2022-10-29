@@ -8,9 +8,9 @@ You can customize your own word dictionary. By editing txt file.
 
 You can import your own word dictionary.
 # Update
-* Quote function
+## Quote function
 it can now by double clicking same word to add quote to this word.
-* Convert Quote
+## Convert Quote
 Add quote change button to change '()' to '{}'.
 
 # UI
