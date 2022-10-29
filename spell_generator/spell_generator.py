@@ -18,7 +18,7 @@ class Gui_helper_main:# I don't like to stuff all widget in main root so I use c
         self.root = Tk()
         self.frame = None
         self.frame_index = 0
-        self.root.geometry('350x400')
+        self.root.geometry('400x650')# main window size
         self.root.title('Spell generator咒語生成器')
         self.root.protocol("WM_DELETE_WINDOW", self.quit)
         # maker info
@@ -53,9 +53,9 @@ class page_module(Frame):# I use page class to manage tkinter widget
         self.spell = ''
         self.spell_dict = {}
 
-        self.spawn_result = Text(self, width=20, height=10)
+        self.spawn_result = Text(self, width=30, height=20)# result text box
         self.spawn_result.grid(column=0, row=0, sticky=N+W)
-        self.word_list = Listbox(self)
+        self.word_list = Listbox(self, width=30, height=20)# list box
         self.word_list.grid(column=0, row=1, sticky=N+W)
         self.load_list()# init listbox
         self.word_list.bind('<Double-1>', self.add_word_dict)
