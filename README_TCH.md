@@ -16,8 +16,10 @@
 新增 quote 按鈕把 '()' 轉換成 '{}'.
 
 ![quote_change](img/quote_change.png)
-# UI
-![img](img/UI.png)
+## 新 UI 尺寸
+![size](img/new_ui_size.png)
+# 新 UI
+![img](img/New_UI.png)
 
 # 咒語辭典格式
 ## "描述:標籤"
@@ -33,3 +35,5 @@
 ## 版本 1.1
 * 可以透過重複雙擊同一個關鍵詞，來增加括號
 * 新增 quote 按鈕把 '()' 轉換成 '{}'
+## 版本 1.1.1
+* UI大小重製
