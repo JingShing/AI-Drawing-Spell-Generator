@@ -54,23 +54,29 @@ class page_module(Frame):# I use page class to manage tkinter widget
         self.spell_dict = {}
 
         self.spawn_result = Text(self, width=30, height=20)# result text box
-        self.spawn_result.grid(column=0, row=0, sticky=N+W)
+        self.spawn_result.grid(column=0, row=0, sticky=N+W, rowspan=7)
         self.word_list = Listbox(self, width=30, height=20)# list box
-        self.word_list.grid(column=0, row=1, sticky=N+W)
+        self.word_list.grid(column=0, row=8, sticky=N+W)
         self.load_list()# init listbox
         self.word_list.bind('<Double-1>', self.add_word_dict)
         self.clear_button = Button(self, text='clear', command=self.clear_word)
         self.clear_button.grid(column=1, row=0, sticky=N+W)
         self.copy_button = Button(self, text='copy', command=self.copy_word)
         self.copy_button.grid(column=2, row=0, sticky=N+W)
-        self.quote_button = Button(self, text='quote', command=self.quote_change)
-        self.quote_button.grid(column=1, row=2, sticky=N+W)
+        self.quote_button = Button(self, text='{ } quote', command=self.quote_change_to_big)
+        self.quote_button.grid(column=1, row=1, sticky=N+W)
+        self.quote_button = Button(self, text='( ) quote', command=self.quote_change_to_small)
+        self.quote_button.grid(column=2, row=1, sticky=N+W)
         self.import_button = Button(self, text='import', command=self.import_set)
-        self.import_button.grid(column=0, row=2, sticky=N+W)
+        self.import_button.grid(column=0, row=9, sticky=N+W)
 
-    def quote_change(self):# change '()' to '{}'
+    def quote_change_to_big(self):# change '()' to '{}'
         self.spell = self.spawn_result.get("1.0",END)
         self.spell = self.spell.replace('(', '{').replace(')', '}')
+        self.spell_to_textbox()
+    def quote_change_to_small(self):# change '{}' to '()'
+        self.spell = self.spawn_result.get("1.0",END)
+        self.spell = self.spell.replace('{', '(').replace('}', ')')
         self.spell_to_textbox()
 
     def dict_to_spell(self):# convert spell dict to spell string
